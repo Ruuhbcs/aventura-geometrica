@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trapézio</title>
+    <link rel="stylesheet" href="assets/css/trapezio.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jockey+One&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Teko:wght@300..700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <main>
+        <h1>Trapézio</h1>
+        <img class="principal" src="assets/imagens/icones/trapezio.png" alt="Imagem de um trapézio, forma geométrica">
+
+        <p>Trapézio é uma figura geométrica plana pertencente ao grupo dos quadriláteros que possui um par de lados paralelos. Os lados paralelos dos trapézios são chamados de bases. A base que possui maior medida recebe o nome de base maior e a que possui menor medida recebe o nome de base menor.</p>
+
+        <h2>Classificação dos trapézios</h2>
+        <p>Trapézios isósceles: são aqueles que possuem lados não paralelos congruentes; <br> Trapézios escalenos: são aqueles que não são trapézios isósceles; <br> Trapézios retângulos: são aqueles em que um dos lados não paralelos forma um ângulo de 90° com a base.</p>
+
+        <img src="assets/imagens/icones/trapezio2.png" alt="Imagem de 3 formas de trapézio">
+
+        <h2>Elementos dos trapézios</h2>
+        <p>Como os trapézios são polígonos, eles possuem os mesmos elementos comuns a todos os polígonos, a saber: <br> <br> Lados: são os segmentos de reta que formam o polígono; <br><br> Vértices: são os pontos de encontro entre os lados;<br><br> Ângulos internos: ângulos no interior do polígono formados por dois lados consecutivos; <br><br> Ângulos externos: ângulos no exterior do polígono formados por um lado e pela extensão do outro, adjacente ao primeiro; <br><br> Diagonais: segmentos de reta que ligam dois vértices não consecutivos.</p>
+
+        <h3>Calcule aqui a área de um trapézio:</h3>
+        <form id="trapezoid-form">
+            <label for="baseMaior">Base Maior:</label>
+            <input type="number" id="baseMaior" name="baseMaior" required>
+
+            <label for="baseMenor">Base Menor:</label>
+            <input type="number" id="baseMenor" name="baseMenor" required>
+
+            <label for="altura">Altura:</label>
+            <input type="number" id="altura" name="altura" required>
+
+            <button type="submit">Calcular Área</button>
+        </form>
+
+        <div id="resultado"></div>
+    </main>
+
+    <script>
+        const form = document.getElementById('trapezoid-form');
+        const resultDiv = document.getElementById('resultado');
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const baseMaior = parseFloat(document.getElementById('baseMaior').value);
+            const baseMenor = parseFloat(document.getElementById('baseMenor').value);
+            const altura = parseFloat(document.getElementById('altura').value);
+
+            const area = ((baseMaior + baseMenor) * altura) / 2;
+
+            resultDiv.textContent = `A área do trapézio é: ${area.toFixed(2)} unidades quadradas`;
+        });
+    </script>
+    </main>
+</body>
+</html>

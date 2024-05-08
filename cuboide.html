@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cubóide</title>
+    <link rel="stylesheet" href="assets/css/cuboide.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jockey+One&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Teko:wght@300..700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+<main>
+    <h1>Cubóide</h1>
+   <img class="principal" src="assets/imagens/icones/cuboide.png" alt="Imagem de um cuboide">
+
+    <p> Um cubóide é uma figura geométrica tridimensional com seis faces retangulares. Ele tem 8 vértices e 12 arestas. As faces opostas de um cuboide são paralelas e congruentes. Um exemplo comum de um cuboide é uma caixa retangular, como uma caixa de sapatos. O cubóide é uma forma muito comum em nossa vida cotidiana, encontrada em embalagens, prédios e muitos outros objetos.</p>
+
+    <h2>Sua história</h2>
+    <p>Desde a arquitetura egípcia até os modernos arranha-céus, o cuboide desempenha um papel crucial na construção de edifícios e estruturas retangulares. Sua forma retangular permite um empacotamento eficiente em embalagens, otimizando o espaço de armazenamento e transporte, especialmente relevante em indústrias como logística e comércio eletrônico.</p>
+    <p>Na matemática, as propriedades do cuboide, como volume e área superficial, são frequentemente exploradas em problemas geométricos e de engenharia. Além disso, sua diversidade de aplicações se estende ao design de móveis, fabricação de peças industriais e até mesmo na modelagem de dados em ciência da computação.</p>
+
+   <h3>Calcule aqui a área de um cubóide:</h3>
+   <form id="areaForm" onsubmit="return calcularArea()">
+    <label for="comprimento">Comprimento:</label>
+    <input type="number" id="comprimento" name="comprimento" required>
+    <br><br>
+    <label for="largura">Largura:</label>
+    <input type="number" id="largura" name="largura" required>
+    <br><br>
+    <label for="altura">Altura:</label>
+    <input type="number" id="altura" name="altura" required>
+    <br><br>
+    <input class="button" type="submit" value="Calcular Área">
+</form>
+<span id="resultado"></span>
+
+<script>
+    function calcularArea() {
+        var comprimento = parseFloat(document.getElementById("comprimento").value);
+        var largura = parseFloat(document.getElementById("largura").value);
+        var altura = parseFloat(document.getElementById("altura").value);
+        var areaTotal = 2 * ((comprimento * largura) + (comprimento * altura) + (largura * altura));
+        document.getElementById("resultado").textContent = "A área total do cubóide é: " + areaTotal;
+        return false;
+    }
+</script>
+  
+</main>
+</body>
+</html>

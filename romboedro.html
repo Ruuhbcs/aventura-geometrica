@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Romboedro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jockey+One&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Teko:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/romboedro.css">
+</head>
+
+<body>
+    <main>
+        <h1>Romboedro</h1>
+       <img class="principal" src="assets/imagens/icones/romboedro.png" alt="Imagem de um romboedro">
+    
+       <p>O romboedro é uma figura geométrica tridimensional que se destaca pela sua forma única e simetria. Ele pertence à família dos sólidos geométricos chamados de paralelepípedos, que incluem também o cubo e o prisma. O romboedro se diferencia dos outros membros dessa família pela forma de suas faces.</p>
+        
+        
+        <h2>Características Principais</h2>
+        <p>1. Faces: <br> Um romboedro tem seis faces, todas elas romboidais. Um romboide é um paralelogramo onde os lados opostos são congruentes, mas os ângulos não são necessariamente retos.</p>
+        <p>2. Arestas: <br> Assim como outros sólidos geométricos, o romboedro possui 12 arestas. Cada aresta conecta dois vértices, formando os limites entre as faces.</p>
+        <p>3. Vértices: <br> O romboedro tem 8 vértices. Cada vértice é o ponto de encontro de três ou mais arestas.</p>
+        <p>4. Simetria: <br> Uma das características marcantes do romboedro é a sua simetria. Ele possui diversos planos de simetria que dividem o sólido em partes iguais. Isso significa que se você dividir um romboedro por um desses planos, as partes resultantes serão idênticas.</p>
+        <p>5. Relação com outras formas: <br> O romboedro é um sólido geométrico relacionado a outras formas, como o cubo e o prisma. Por exemplo, um cubo pode ser considerado um caso especial de romboedro, onde todas as faces são quadrados.</p>
+    
+    
+        <p>O romboedro é muito mais do que uma figura geométrica abstrata. Sua simetria elegante e propriedades únicas o tornam uma figura fascinante tanto para a matemática pura quanto para aplicações práticas em diversos campos. Explorar suas características e aplicações pode ampliar nossa compreensão do mundo ao nosso redor, mostrando como a geometria está presente em muitos aspectos da vida cotidiana.</p>
+        
+    
+       <h3>Calcule aqui a área de um romboedro: </h3>
+        
+        <form id="romboedroForm">
+        <label for="diagonal1">Diagonal 1:</label>
+        <input type="number" id="diagonal1" name="diagonal1" required>
+        <label for="diagonal2">Diagonal 2:</label>
+        <input type="number" id="diagonal2" name="diagonal2" required>
+        <label for="height">Altura:</label>
+        <input type="number" id="height" name="height" required>
+        <button type="button" onclick="calculateArea()">Calcular Área</button>
+    </form>
+    <p id="result"></p>
+
+</main>
+
+<script>
+    function calculateArea() {
+        var diagonal1 = parseFloat(document.getElementById("diagonal1").value);
+        var diagonal2 = parseFloat(document.getElementById("diagonal2").value);
+        var height = parseFloat(document.getElementById("height").value);
+        var area = 0.5 * diagonal1 * diagonal2 + (diagonal1 * height);
+        document.getElementById("result").innerText = "Área do romboedro: " + area.toFixed(2) + " unidades quadradas";
+    }
+</script>
+      
+</body>
+</html>

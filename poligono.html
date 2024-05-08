@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polígno</title>
+    <link rel="stylesheet" href="assets/css/poligono.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jockey+One&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Teko:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <h1>Polígno</h1>
+        <img src="assets/imagens/icones/poligonos.png" alt="Imagem com 8 formas diferentes de poligonos">
+
+        <p>Polígonos são figuras geométricas planas e fechadas formadas por segmentos de reta. Os polígonos dividem-se em dois grupos, os convexos e os não convexos. Quando um polígono possui todos os seus lados iguais e, consequentemente, todos os ângulos internos iguais, trata-se de um polígono regular. Os polígonos regulares podem ser nomeados de acordo com a quantidade de seus lados.</p>
+
+        <h2>Classificação dos polígnos</h2>
+        <p>Os polígonos são classificados pela medida de seus ângulos e lados. Um polígono é dito equilátero quando possui lados congruentes, ou seja, todos lados iguais; e será dito equiângulo quando possuir ângulos congruentes, isto é, todos ângulos iguais. Caso um polígono seja equilátero e equiângulo, então ele será um polígono regular.
+        Em todo polígono regular, o centro tem a mesma distância dos lados, ou seja, é equidistante dos lados. O centro do polígono é também o centro da circunferência inscrita no polígono, ou seja, a circunferência que está “dentro” da circunferência.</p>
+
+        <h2>Polígnos Regulares</h2>
+        <p>Polígono regular é o polígono convexo que possui todos os lados congruentes e todos os ângulos internos congruentes, ou seja, os lados possuem a mesma medida e os ângulos internos também possuem a mesma medida. O triângulo equilátero e o quadrado são alguns dentre os polígonos regulares conhecidos.</p>
+        <p>A fórmula simples para achar a área de um polígono regular (com todos os lados e todos os ângulos iguais) é: <br> área = 1/2 x perímetro x apótema. Em outras palavras, essa fórmula quer dizer que: Perímetro = a soma do comprimento de todos os lados.</p>
+
+        <h2>Calcule aqui a de Área de alguns dos poligonos: </h2>
+
+    <form id="areaForm" onsubmit="return calcularArea()">
+    <label for="forma">Escolha uma forma:</label>
+    <select id="forma" name="forma">
+        <option value="triangulo">Triângulo</option>
+        <option value="hexagono">Hexágono Regular</option>
+        <option value="pentagono">Pentágono</option>
+    </select>
+    <br><br>
+    <div id="inputs"></div>
+    <br>
+    <input class="button" type="submit" value="Calcular Área">
+
+    <p id="result"></p>
+</form>
+
+<script>
+function calcularArea() {
+    event.preventDefault() 
+    var formaSelecionada = document.getElementById("forma").value;
+    var area;
+ 
+
+    if (formaSelecionada === "triangulo") {
+        var base = parseFloat(document.getElementById("base").value);
+        var altura = parseFloat(document.getElementById("altura").value);
+        area = (base * altura) / 2;
+    } else if (formaSelecionada === "hexagono") {
+        var ladoHexagono = parseFloat(document.getElementById("ladoHexagono").value);
+        area = (Math.sqrt(3) * Math.pow(ladoHexagono, 2)) / 2;
+    } else if (formaSelecionada === "pentagono") {
+        var perimetro = parseFloat(document.getElementById("perimetro").value);
+        var apotema = parseFloat(document.getElementById("apotema").value);
+        area = perimetro * apotema;
+    }
+
+    document.getElementById("result").innerText = "Área total da forma selecionada: " + area;
+}
+    
+
+document.getElementById("forma").addEventListener("change", function() {
+    var formaSelecionada = this.value;
+    var inputsDiv = document.getElementById("inputs");
+    inputsDiv.innerHTML = "";
+
+    if (formaSelecionada === "triangulo") {
+        inputsDiv.innerHTML = `
+            <label for="base">Base:</label>
+            <input type="number" id="base" name="base" required>
+            <br><br>
+            <label for="altura">Altura:</label>
+            <input type="number" id="altura" name="altura" required>
+        `;
+    } else if (formaSelecionada === "hexagono") {
+        inputsDiv.innerHTML = `
+            <label for="ladoHexagono">Tamanho do lado:</label>
+            <input type="number" id="ladoHexagono" name="ladoHexagono" required>
+        `;
+    } else if (formaSelecionada === "pentagono") {
+        inputsDiv.innerHTML = `
+            <label for="perimetro">Perímetro:</label>
+            <input type="number" id="perimetro" name="perimetro" required>
+            <br><br>
+            <label for="apotema">Apótema:</label>
+            <input type="number" id="apotema" name="apotema" required>
+        `;
+    }
+});
+</script>
+    </main>
+</body>
+</html>

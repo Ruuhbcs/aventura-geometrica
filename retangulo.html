@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retângulo</title>
+    <link rel="stylesheet" href="assets/css/retangulo.css"
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jockey+One&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Teko:wght@300..700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<main>
+    <h1>Retângulo</h1>
+   <img class="principal" src="assets/imagens/icones/retangulo.png" alt="Imagem de um retângulo">
+
+    <p>O retângulo é uma figura geométrica plana formada por quatro lados (quadrilátero) e apresenta os quatro ângulos internos congruentes (mesma medida) e retos (90°).</p>
+    <p>Além disso, seus lados opostos são paralelos, por isso, o retângulo é um paralelogramo. Quando seus lados tiverem mesma medida, ele também será um quadrado. Ou seja, um quadrado é um retângulo especial.</p>
+
+    <h2>Área do retângulo</h2>
+    <p>Para encontrar a área da superfície de um retângulo, basta multiplicar o valor da base pelo da altura.</p>
+    <p>Assim, a fórmula da área do retângulo é expressa da seguinte forma: <br><br> A = b.h <br> <br> Onde,<br> <br>  A: área <br> b: base <br> h: altura</p>
+
+    <h2>Retângulo Áureo</h2>
+    <p>O retângulo áureo, conhecido também como retângulo de ouro, é bastante admirado pelos matemáticos, arquitetos e artistas. <strong>Ele é assim conhecido por ter a proporção áurea.</strong> Perceber a existência da proporção áurea em quadros e construções artísticas é bastante comum. Muitas vezes essa proporção é relacionada com objetos considerados belos, pela harmônia que ela preserva. Quando dividimos o retângulo, para que ele seja considerado áureo, temos que:</p>
+
+    <img class="principal" src="assets/imagens/icones/retangulo2.png" alt="Imagem de um retângulo com a proporção áurea dentro.">
+
+    <p>Quando o retângulo é áureo, a proporção entre os seus lados é de 1 para, aproximadamente, 1,618, aproximando-se do número irracional Φ = 1,61803398875… </p>
+
+   <h3>Calcule aqui a área de um retângulo:</h3>
+
+   <form id="rectangleForm">
+    <label for="base">Base (b):</label>
+    <input type="number" id="base" name="base" required>
+    <label for="height">Altura (h):</label>
+    <input type="number" id="height" name="height" required>
+    <button type="button" onclick="calculateArea()">Calcular Área</button>
+</form>
+
+<p id="result"></p>
+</main>
+
+<script>
+function calculateArea() {
+var base = document.getElementById("base").value;
+var height = document.getElementById("height").value;
+var area = base * height;
+document.getElementById("result").innerText = "Área do retângulo: " + area + " unidades quadradas";
+}
+</script>
+
+
+</body>
+</html>

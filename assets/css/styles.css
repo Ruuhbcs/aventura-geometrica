@@ -1,0 +1,175 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #fff;
+}
+
+header {
+    background-color: #a69dff;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 36px;
+    margin: 0;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0 20px;
+}
+
+.shapes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+button {
+    background-color: #bd76ff;
+    border: none;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #7d7c7e;
+    transition: 1s;
+}
+
+.circulo {
+    background-color: #ff69b4;
+    color: #fff;
+}
+
+.retangulo {
+    background-color: #33cc33;
+    color: #fff;
+}
+
+.cubo {
+    background-color: #6666ff;
+    color: #fff;
+}
+
+.romboedro{
+    background-color: rgb(201, 201, 24);
+    color: #fff;
+}
+
+.trapezio{
+    background-color: rgb(201, 24, 24);
+    color: #fff;
+}
+
+.poligono{
+    background-color: rgb(248, 112, 22);
+    color: #fff;
+}
+
+.quadrado{
+    background-color: rgb(51, 158, 99);
+    color: #fff;
+}
+
+.cuboide{
+    background-color: rgb(174, 15, 189);
+    color: #fff;
+}
+
+
+i {
+    font-size: 48px;
+    margin-right: 10px;
+}
+
+span {
+    font-size: 24px;
+}body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #e9d4af;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #dd9b4b;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: #442b15;
+    margin: 0;
+}
+
+.main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.formas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.shapeButton {
+    padding: 15px 30px;
+    margin: 10px;
+    border: none;
+    border-radius: 15px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.shapeButton span {
+    color: #fff;
+}
+
+.circleButton {
+    background-color: #a74713;
+}
+
+.cubeButton {
+    background-color: #442b15;
+}
+
+.rectangleButton {
+    background-color: #6cb4a5;
+}
+
+.rhomboidButton {
+    background-color: #dd9b4b;
+}
+
+.trapezoidButton {
+    background-color: #6cb4a5;
+}
+
+.polygonButton {
+    background-color: #a74713;
+}
+
+.squareButton {
+    background-color: #442b15;
+}
+
+.cuboidButton {
+    background-color: #dd9b4b;
+}
+
+.shapeButton:hover {
+    filter: brightness(1.2);
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Círculo</title>
+    <link rel="stylesheet" href="assets/css/circulo.css"
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jockey+One&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Teko:wght@300..700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+<main>
+    <h1>Círculo</h1>
+   <img class="principal" src="assets/imagens/icones/circulo.png" alt="Imagem de um círculo">
+
+   <p> O círculo, é uma figura geométrica plana que é definida da seguinte maneira: <br> Círculo é o conjunto de pontos resultantes da união entre uma circunferência e seus pontos internos. Em outras palavras, o círculo é a área cuja fronteira é uma circunferência.</p>
+   <p>Tomando novamente os conhecimentos vindos da Geometria Analítica, a equação do círculo é praticamente igual à equação da circunferência. A diferença encontra-se no fato de o círculo ser um conjunto de pontos menor ou igual ao raio. A partir disso, temos a seguinte equação: <br></p>
+   <p>dAC ≤ r <br>
+    √[(a – x)2 + (b – y)2] ≤ r <br>
+    (a – x)2 + (b – y)2 ≤ r2</p>
+
+    <h2>Elementos do círculo</h2>
+
+    <p>Os elementos mais importantes do círculo são o centro e o raio. O centro, como o nome sugere, é o ponto central do círculo. Já o raio é a distância entre o centro do círculo e sua borda.</p>
+    <p>Ao escrever sobre um círculo (ou circunferência), normalmente indicamos o centro e o raio entre parênteses e separados por vírgula. Assim, um círculo c de centro P e raio r é representado por: </p>
+    <p>c(P,r)</p>
+    <p>Outro elemento do círculo é o diâmetro, que corresponde ao segmento que cruza o centro do círculo e tem extremidades em dois pontos do círculo. Assim, a medida do diâmetro é o dobro da medida do raio.</p>
+
+    <img src="assets/imagens/icones/circulo2.png" alt="Imagem mostrando o que é raio e diametro em um círculo">
+
+   <h3>Calcule aqui a área de um círculo:</h3>
+
+   <form id="CirculoForms">
+        <label for="radius">Raio do círculo:</label>
+        <input type="number" id="radius" name="radius" required>
+        <button type="button" onclick="calculateArea()">Calcular Área</button>
+    </form>
+
+<p id="result"></p>
+</main>
+
+<script>
+function calculateArea() {
+    var radius = document.getElementById("radius").value;
+    var area = Math.PI * Math.pow(radius, 2);
+    document.getElementById("result").innerText = "Área do círculo: " + area.toFixed(2);
+}
+</script>
+</main>
+</body>
+</html>

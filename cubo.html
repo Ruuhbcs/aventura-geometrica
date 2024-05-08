@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cubo</title>
+    <link rel="stylesheet" href="assets/css/cubo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jockey+One&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Teko:wght@300..700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+<main>
+    <h1>Cubo</h1>
+   <img class="principal" src="assets/imagens/icones/cubo.png" alt="Imagem de um cubo">
+
+   <p>O cubo, conhecido também como hexaedro, é um sólido geométrico que possui seis faces, todas elas formadas por quadrados. Além das 6 faces, o cubo possui 12 arestas e 8 vértices. Estudado na Geometria Espacial, o cubo possui todas as suas arestas congruentes e perpendiculares, logo ele é classificado como um poliedro regular.  Podemos perceber a presença do formato de cubo no nosso cotidiano, em dados comuns utilizados em jogos, embalagens, caixas, entre outros objetos.</p>
+
+
+    <h2>Planificação do cubo</h2>
+    <p>Para calcular a área do cubo, é importante analisarmos sua planificação. A planificação do cubo é composta por 6 quadrados, todos congruentes entre si: </p>
+
+    <img src="assets/imagens/icones/cubo2.png" alt="Imagem mostrando o que é raio e diametro em um círculo">
+
+    <p>O cubo é composto por 2 bases quadradas, e a sua área lateral é composta por 4 quadrados, todos congruentes.</p>
+
+    <h2>Área de um cubo</h2>
+    <p>A área corresponde a quantidade de espaço (superfície) necessária para determinado objeto.  Nesse caso, para calcular a área total do cubo, que possui 6 faces, utilizamos a seguinte fórmula: </p>
+    <p>At = 6a<sup>2</sup> <br> Sendo, <br> At: área total <br> a: aresta</p>
+    <p>Para tanto, a área lateral do cubo, ou seja, a soma das áreas dos quatro quadrados que formam esse poliedro regular, é calculada a partir da fórmula abaixo: </p>
+    <p>Al = 4a<sup>2</sup> <br> Sendo, <br> Al: área lateral <br> a: aresta</p>
+    <p>Além disso, é possível calcular a área da base do cubo, dada pela fórmula:</p>
+    <p>Ab = a<sup>2</sup> <br> Sendo, <br> Ab: área da base <br> a: aresta</p>
+
+   <h3>Calcule aqui a área de um cubo:</h3>
+   <form id="cubeForm">
+    <label for="edge">Comprimento da aresta:</label>
+    <input type="number" id="edge" name="edge" required>
+    <button type="button" onclick="calculateArea()">Calcular Área</button>
+</form>
+<p id="result"></p>
+</main>
+<script>
+function calculateArea() {
+var edge = document.getElementById("edge").value;
+var totalArea = 6 * Math.pow(edge, 2);
+document.getElementById("result").innerText = "Área total do cubo: " + totalArea + " unidades quadradas";
+}
+</script>
+</main>
+</body>
+</html>
